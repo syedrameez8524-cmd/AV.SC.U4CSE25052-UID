@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Courses Cards</title>
+
+    <style>
+        body{
+            font-family: Arial;
+            background:#0f172a;
+            text-align:center;
+            margin:0;
+        }
+
+        h1{
+            background:#2413b8;
+            color:rgb(253, 251, 251);
+            padding:20px;
+            margin:0;
+        }
+
+        .container{
+            display:flex;
+            flex-wrap:wrap;
+            justify-content:center;
+            gap:25px;
+            padding:40px;
+        }
+
+        .card{
+            background:white;
+            color:black;
+            width:390px;
+            padding:20px;
+            border-radius:12px;
+            box-shadow:0 5px 15px gray;
+        }
+
+        .hero-img{
+            width:350px;
+            height:200px;
+            object-fit:cover;
+            border-radius:8px;
+        }
+
+        .card-title{
+            font-size:20px;
+            font-weight:bold;
+            margin-top:10px;
+        }
+
+        .card-text{
+            margin:10px 0;
+        }
+
+        .card-btn{
+            display:inline-block;
+            padding:8px 16px;
+            background:#1cb4b9;
+            color:white;
+            text-decoration:none;
+            border-radius:6px;
+        }
+
+        .card-btn:hover{
+            background:black;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Our Courses</h1>
+
+<div class="container">
+
+    <!-- Card 1 -->
+    <div class="card">
+        <img src="B.Tech-in-Computer-Science-Engineering.webp" alt="MBA" class="hero-img">
+        <div class="card-title">B.Tech</div>
+        <div class="card-text">Bachelor of Technology in Computer Science.</div>
+        <a href="#" class="card-btn">Explore</a>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card">
+        <img src="MTECH.jpeg" alt="MTech" class="hero-img">
+        <div class="card-title">M.Tech</div>
+        <div class="card-text">Master of Technology advanced engineering.</div>
+        <a href="#" class="card-btn">Explore</a>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card">
+        <img src="MBA.jpeg" alt="BTech" class="hero-img">
+        <div class="card-title">MBA</div>
+        <div class="card-text">Master of Business Administration.</div>
+        <a href="#" class="card-btn">Explore</a>
+    </div>
+
+</div>
+
+</body>
+</html>
