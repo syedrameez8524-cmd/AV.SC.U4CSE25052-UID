@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Mini Website - Amrita</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#f4f4f4;
+}
+
+/* Header */
+.header{
+    background:#be0303;
+    color:#fffbfb;
+    text-align:center;
+    padding:18px;
+    font-size:22px;
+}
+
+/* Navigation */
+.nav{
+    background:#000;
+    text-align:center;
+    padding:12px;
+}
+
+.nav label{
+    color:#3cff00;
+    margin:0 25px;
+    font-size:18px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.nav label:hover{
+    color:#00ff6a;
+}
+
+/* Iframe */
+iframe{
+    width:100%;
+    height:520px;
+    border:none;
+    background:white;
+}
+
+/* Hide radio buttons */
+input{
+    display:none;
+}
+
+/* Hide all pages */
+.content{
+    display:none;
+}
+
+/* Show selected page */
+#home:checked ~ #homeFrame,
+#about:checked ~ #aboutFrame,
+#contact:checked ~ #contactFrame{
+    display:block;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="header">
+<h2>Amrita Vishwa Vidyapeetham</h2>
+</div>
+
+<input type="radio" name="menu" id="home" checked>
+<input type="radio" name="menu" id="about">
+<input type="radio" name="menu" id="contact">
+
+<div class="nav">
+<label for="home">Home</label>
+<label for="about">About</label>
+<label for="contact">Contact</label>
+</div>
+
+<!-- HOME PAGE -->
+<iframe id="homeFrame" class="content" srcdoc="
+<html>
+<body style='font-family:Arial;text-align:center;padding:30px;background:#ffffff;'>
+
+<h2 style='color:#1f06dd;'>Welcome to Amrita Vishwa Vidyapeetham</h2>
+
+<img src='AMAR.JPEG' width='65%' style='border-radius:12px;box-shadow:0 0 10px gray;'>
+
+<p style='font-size:18px;margin-top:15px;'>Amrita University Campus View</p>
+
+</body>
+</html>
+">
+</iframe>
+
+<!-- ABOUT PAGE (MODIFIED) -->
+<iframe id="aboutFrame" class="content" srcdoc="
+<html>
+<body style='font-family:Arial;padding:30px;background:#ffffff;'>
+
+<h2 style='color:#1f06dd;'>About the University</h2>
+
+<p>Amrita Vishwa Vidyapeetham is one of the leading private universities in India known for its high quality education and research.</p>
+
+<p>The university provides programs in fields such as Engineering, Medicine, Business Administration, Arts, and Computer Science.</p>
+
+<p>It focuses on innovation, social responsibility, and global collaboration to create skilled professionals and researchers.</p>
+
+<p>Amrita has several campuses across India including Amaravati, Bengaluru, Coimbatore, Chennai, Kochi, Mysuru, Amritapuri and NCR Delhi.</p>
+
+<p>The institution is also recognized for its strong research contributions and international academic partnerships.</p>
+
+</body>
+</html>
+">
+</iframe>
+
+<!-- CONTACT PAGE (MODIFIED) -->
+<iframe id="contactFrame" class="content" srcdoc="
+<html>
+<body style='font-family:Arial;padding:30px;background:#ffffff;'>
+
+<h2 style='color:#1f06dd;'>Get in Touch</h2>
+
+<p><b>University Name:</b> Amrita Vishwa Vidyapeetham</p>
+
+<p><b>Main Office:</b> Coimbatore, Tamil Nadu, India</p>
+
+<p><b>Phone Number:</b> +91 9182345450</p>
+
+<p><b>Email:</b> admissions@amrita.edu</p>
+
+<p><b>Official Website:</b> www.amrita.edu</p>
+
+<p>For admission details, course information, and campus updates, students can visit the official website or contact the admission office.</p>
+
+</body>
+</html>
+">
+</iframe>
+
+</body>
+</html>
