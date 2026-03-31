@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Amrita Vishwa Vidyapeetham</title>
+
+    <style>
+        body{
+            margin:0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #d10606, #e01e1e);
+        }
+
+        .container{
+            height: 90%;
+            width: 90%;
+            margin: 30px auto;
+            background: rgb(235, 217, 217);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgb(10, 0, 0);
+        }
+
+        h1{
+            text-align: center;
+            color: rgb(249, 1, 50);
+        }
+
+        .campus-links{
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .campus-links a{
+            text-decoration: none;
+            margin: 0 15px;
+            color: rgb(18, 62, 120);
+            font-weight: bold;
+        }
+
+        .campus-links a:hover{
+            color: crimson;
+        }
+
+        .main{
+            display: flex;
+            gap: 20px;
+        }
+
+        .login{
+            width: 35%;
+            background: #f4f4f4;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .login input, .login select{
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid rgb(10, 10, 10);
+        }
+
+        .login button{
+            width: 90%;
+            padding: 10px;
+            background: black;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .about{
+            width: 65%;
+            background: #dedbdb;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .campus-content{
+            display: none;
+        }
+
+        .campus-content:target{
+            display: block;
+        }
+
+        .campus-content img{
+            width: 70%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1><b>AMRITA VISHWA VIDYAPEETHAM</b></h1>
+
+    <div class="campus-links">
+        <a href="#amaravati">Amaravati</a>
+        <a href="#amritapuri">Amritapuri</a>
+        <a href="#chennai">Chennai</a>
+        <a href="#coimbatore">Coimbatore</a>
+        <a href="#mysore">Mysore</a>
+        <a href="#bangalore">Bangalore</a>
+        <a href="#kochi">Kochi</a>
+        <a href="#faridabad">Faridabad</a>
+        <a href="#nagaracoil">Nagaracoil</a>
+        <a href="#haridwar">Haridwar</a>
+    </div>
+
+    <div class="main">
+
+        <!-- Login Section -->
+        <div class="login">
+            <h3>Student Login</h3>
+            <input type="text" placeholder="Username">
+            <input type="password" placeholder="Password">
+            <input type="email" placeholder="Enter Email" required>
+            <input type="tel" placeholder="Enter Phone Number" required>
+
+            <select required>
+                <option value="">Select Course</option>
+                <option>B.Tech</option>
+                <option>M.Tech</option>
+                <option>BCA</option>
+                <option>MCA</option>
+                <option>BBA</option>
+                <option>MBA</option>
+            </select>
+
+            <button>Submit</button>
+        </div>
+
+        <!-- Campus Details Section -->
+        <div class="about">
+            <h3>About the Campus</h3>
+
+            <div id="amaravati" class="campus-content">
+                <img src="AV.jpeg" alt="Amaravati Campus">
+                <h4>Amaravati Campus</h4>
+                <p>Modern infrastructure and advanced engineering programs.A newer campus, expanding the university's presence in South India.</p>
+            </div>
+
+            <div id="amritapuri" class="campus-content">
+                <img src="API.jpeg" alt="Amritapuri Campus">
+                <h4>Amritapuri Campus</h4>
+                <p>Main campus located in Kerala known for research excellence.Known for engineering and biotechnology.Situated near the beach, it focuses on, for example, biotechnology, engineering, and spiritual-based education.</p>
+            </div>
+
+            <div id="chennai" class="campus-content">
+                <img src="MAS.jpeg" alt="Chennai Campus">
+                <h4>Chennai Campus</h4>
+                <p>Strong industry collaboration and technical programs.Offers various engineering programs.</p>
+            </div>
+
+            <div id="coimbatore" class="campus-content">
+                <img src="COI.jpeg" alt="Coimbatore Campus">
+                <h4>Coimbatore Campus</h4>
+                <p>Known for innovation and academic excellence.Administrative headquarters, engineering, and business schools.Located in Ettimadai, it is the administrative headquarters and houses the main Schools of Engineering and Business. It features a large, green campus with extensive infrastructure (libraries, labs).</p>
+            </div>
+
+            <div id="mysore" class="campus-content">
+                <img src="MYS.jpeg" alt="Mysore Campus">
+                <h4>Mysore Campus</h4>
+                <p>Focused on computing and engineering education.</p>
+            </div>
+
+            <div id="bangalore" class="campus-content">
+                <img src="BLR.jpeg" alt="Bangalore Campus">
+                <h4>Bangalore Campus</h4>
+                <p>Offers management and technology programs.Focuses on engineering and technology. Focuses on technology, with strong placement opportunities and proximity to the tech hub.</p>
+            </div>
+            <div id="kochi" class="campus-content">
+                <img src="KOC.jpeg" alt="Kochi Campus">
+                <h4>Kochi Campus</h4>
+                <p>Known for its vibrant campus life and strong industry ties. Offers programs in engineering, management, and applied sciences.</p>
+            </div>
+                <div id="faridabad" class="campus-content">
+                <img src="FAR.jpeg" alt="Faridabad Campus">
+                <h4>Faridabad Campus</h4>
+                <p>Located in Haryana, this campus offers programs in engineering and management with strong industry connections.</p>
+            </div>
+            <div id="nagaracoil" class="campus-content">
+                <img src="nagacoil.jpg" alt="Nagaracoil Campus">
+                <h4>Nagaracoil Campus</h4>
+                <p>Known for its serene environment and strong academic programs. Offers undergraduate and postgraduate programs in engineering, management, and applied sciences.</p>
+            </div>
+            <div id="haridwar" class="campus-content">
+                <img src="haridwar.jpeg"Haridwar Campus">
+                <h4>Haridwar Campus</h4>
+                <p>Located in Uttarakhand, this campus offers programs in engineering, management, and applied sciences with a focus on holistic education.</p>
+            </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
