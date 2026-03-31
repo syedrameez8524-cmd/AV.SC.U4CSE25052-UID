@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Smart E-Commerce Store</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+background:#f1f5f9;
+}
+
+/* Header */
+.header{
+background:linear-gradient(90deg,#ff7a18,#ffb347);
+color:white;
+text-align:center;
+padding:20px;
+}
+
+.sale{
+background:#111827;
+color:white;
+text-align:center;
+padding:10px;
+}
+
+/* Layout */
+.container{
+display:grid;
+grid-template-columns:240px 1fr;
+gap:20px;
+padding:20px;
+}
+
+/* Sidebar */
+.sidebar{
+background:#1f2937;
+padding:20px;
+border-radius:10px;
+}
+
+.sidebar h3{
+color:white;
+text-align:center;
+}
+
+.sidebar button{
+width:100%;
+padding:10px;
+margin:10px 0;
+border:none;
+border-radius:5px;
+background:#374151;
+color:white;
+cursor:pointer;
+}
+
+.sidebar button:hover{
+background:#ff7a18;
+}
+
+/* Products */
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.card{
+background:white;
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 5px 12px rgba(0,0,0,0.15);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.card img{
+width:100%;
+height:170px;
+object-fit:cover;
+}
+
+.card-content{
+padding:15px;
+text-align:center;
+}
+
+.price{
+color:#ff7a18;
+font-weight:bold;
+margin-bottom:10px;
+}
+
+.card button{
+background:#ff7a18;
+border:none;
+padding:8px 12px;
+color:white;
+border-radius:5px;
+cursor:pointer;
+}
+
+.card button:hover{
+background:#e5640f;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="header">
+<h1> Smart E-Commerce Store</h1>
+</div>
+
+<div class="sale">
+ Big Sale – Up to 50% OFF 
+</div>
+
+<div class="container">
+
+<div class="sidebar">
+
+<h3>Categories</h3>
+
+<button onclick="showCategory('electronics')">Electronics</button>
+<button onclick="showCategory('clothing')">Clothing</button>
+<button onclick="showCategory('appliances')">Home Appliances</button>
+<button onclick="showCategory('books')">Books</button>
+
+</div>
+
+<div class="products" id="productArea"></div>
+
+</div>
+
+<script>
+
+const products = {
+
+electronics:[
+{name:"Laptop",price:"₹50000",img:"lap.avif"},
+{name:"Smartphone",price:"₹20000",img:"sp.jpeg"},
+{name:"Headphones",price:"₹2000",img:"hp.jpg"}
+],
+
+clothing:[
+{name:"T-Shirt",price:"₹800",img:"ts.jpg"},
+{name:"Jacket",price:"₹2000",img:"jac.jpeg"},
+{name:"Jeans",price:"₹1500",img:"jeans.jpeg"}
+],
+
+appliances:[
+{name:"Washing Machine",price:"₹22000",img:"wm.jpeg"},
+{name:"Microwave",price:"₹7000",img:"mw.jpeg"},
+{name:"Refrigerator",price:"₹18000",img:"fd.webp"}
+],
+
+books:[
+{name:"Programming Book",price:"₹600",img:"pb.jpeg"},
+{name:"Science Book",price:"₹500",img:"sb.jpeg"},
+{name:"History Book",price:"₹450",img:"hb.jpeg"}
+]
+
+};
+
+function showCategory(category){
+
+let area=document.getElementById("productArea");
+area.innerHTML="";
+
+products[category].forEach(item=>{
+
+area.innerHTML+=`
+
+<div class="card">
+
+<img src="${item.img}">
+
+<div class="card-content">
+
+<h3>${item.name}</h3>
+<div class="price">${item.price}</div>
+<button>Add to Cart</button>
+
+</div>
+
+</div>
+
+`;
+
+});
+
+}
+
+showCategory("electronics");
+
+</script>
+
+</body>
+</html>
