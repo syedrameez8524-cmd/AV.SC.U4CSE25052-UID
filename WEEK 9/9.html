@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Logic Programs</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #00bbffbc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .box {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            width: 300px;
+        }
+
+        h2 {
+            margin-bottom: 15px;
+        }
+
+        input {
+            width: 90%;
+            padding: 8px;
+            margin-bottom: 15px;
+        }
+
+        button {
+            width: 45%;
+            margin: 5px;
+            padding: 10px;
+            border: none;
+            background: #0d00fe;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #output {
+            margin-top: 15px;
+            padding: 10px;
+            background: #f4f0f0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+
+    <h2>Logic Programs</h2>
+
+    <input type="number" id="num" placeholder="Enter a number">
+
+    <br>
+
+    <button onclick="evenOdd()">Even / Odd</button>
+    <button onclick="prime()">Prime / Not</button>
+    <button onclick="factorial()">Factorial</button>
+    <button onclick="armstrong()">Armstrong</button>
+
+    <div id="output">Result will appear here</div>
+
+</div>
+
+<script>
+
+// Even / Odd
+function evenOdd() {
+    let n = document.getElementById("num").value;
+
+    if (n % 2 == 0)
+        show("Even Number");
+    else
+        show("Odd Number");
+}
+
+// Prime
+function prime() {
+    let n = document.getElementById("num").value;
+    let flag = true;
+
+    if (n <= 1) flag = false;
+
+    for (let i = 2; i < n; i++) {
+        if (n % i == 0) {
+            flag = false;
+            break;
+        }
+    }
+
+    show(flag ? "Prime Number" : "Not Prime");
+}
+
+// Factorial
+function factorial() {
+    let n = document.getElementById("num").value;
+    let fact = 1;
+
+    for (let i = 1; i <= n; i++) {
+        fact *= i;
+    }
+
+    show("Factorial = " + fact);
+}
+
+// Armstrong
+function armstrong() {
+    let n = document.getElementById("num").value;
+    let temp = n, sum = 0;
+
+    while (temp > 0) {
+        let d = temp % 10;
+        sum += d * d * d;
+        temp = Math.floor(temp / 10);
+    }
+
+    if (sum == n)
+        show("Armstrong Number");
+    else
+        show("Not Armstrong");
+}
+
+// Output function
+function show(msg) {
+    document.getElementById("output").innerHTML = msg;
+}
+
+</script>
+
+</body>
+</html>
