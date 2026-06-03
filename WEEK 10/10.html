@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Week 10 Programs</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #02f2ff;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            padding: 20px;
+        }
+
+        .left, .right {
+            width: 50%;
+            padding: 20px;
+        }
+
+        .left {
+            border-right: 2px solid gray;
+        }
+
+        h3 {
+            margin-bottom: 10px;
+        }
+
+        input {
+            width: 90%;
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            display: block;
+            width: 90%;
+            padding: 10px;
+            margin: 5px 0;
+            background: #aba3a3;
+            border: none;
+            cursor: pointer;
+        }
+
+        #output {
+            background: #dbdaa4;
+            padding: 20px;
+            min-height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- LEFT SIDE -->
+    <div class="left">
+        <h3>Enter Input</h3>
+
+        <input type="text" id="info" placeholder="Click a button to see input format">
+
+        <button onclick="signProduct()">Sign of Product</button>
+        <button onclick="sortNumbers()">Sort Numbers</button>
+        <button onclick="largest()">Largest Number</button>
+        <button onclick="oddEven()">Odd / Even 0-15</button>
+        <button onclick="grade()">Student Grade</button>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="right">
+        <h3>Output</h3>
+        <div id="output">Result will appear here</div>
+    </div>
+
+</div>
+<footer style="color: #aba3a3;"><center>RAMEEZ-CSE25052</center></footer>
+
+<script>
+
+// A) Sign of Product
+function signProduct() {
+    let a = prompt("Enter first number:");
+    let b = prompt("Enter second number:");
+    let c = prompt("Enter third number:");
+
+    let p = a * b * c;
+
+    if (p > 0)
+        show("Sign is +");
+    else if (p < 0)
+        show("Sign is -");
+    else
+        show("Zero");
+}
+
+// B) Sort Numbers
+function sortNumbers() {
+    let a = parseInt(prompt("Enter first number:"));
+    let b = parseInt(prompt("Enter second number:"));
+    let c = parseInt(prompt("Enter third number:"));
+
+    let arr = [a, b, c];
+    arr.sort(function(x, y) { return x - y });
+
+    show("Sorted: " + arr.join(", "));
+}
+
+// C) Largest of 5
+function largest() {
+    let max = -Infinity;
+
+    for (let i = 1; i <= 5; i++) {
+        let n = parseInt(prompt("Enter number " + i));
+        if (n > max) max = n;
+    }
+
+    show("Largest Number: " + max);
+}
+
+// D) Odd / Even 0–15
+function oddEven() {
+    let result = "";
+
+    for (let i = 0; i <= 15; i++) {
+        result += i + " is " + (i % 2 == 0 ? "Even" : "Odd") + "<br>";
+    }
+
+    show(result);
+}
+
+// E) Grade Calculator
+function grade() {
+    let total = 0;
+
+    for (let i = 1; i <= 6; i++) {
+        total += parseInt(prompt("Enter mark " + i));
+    }
+
+    let avg = total / 6;
+    let grade;
+
+    if (avg >= 90) grade = "A";
+    else if (avg >= 75) grade = "B";
+    else if (avg >= 60) grade = "C";
+    else if (avg >= 50) grade = "D";
+    else grade = "F";
+
+    show("Average: " + avg + "<br>Grade: " + grade);
+}
+
+// Output function
+function show(msg) {
+    document.getElementById("output").innerHTML = msg;
+}
+
+</script>
+
+</body>
+</html>
